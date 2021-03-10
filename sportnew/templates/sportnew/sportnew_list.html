@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<div class="container">
+    <h1 style="background-color: rgba(0, 170, 0, 0.603); text-align: center; color: #fff;">All NEWS |<small style="text-decoration: none;"><a href="{%url 'categories:categories'%}">Categories</a></small></h1>
+    {% include "sportnew/sportnew.html"%}
+
+</div>
+{%endblock%}

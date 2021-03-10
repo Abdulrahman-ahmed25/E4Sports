@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<div class="container">
+    <h1 style="background-color: rgba(0, 170, 0, 0.603); text-align: center; color: #fff;">{{object}}</h1>
+    <img src="{{object.background.url}}" style="width: 100%; height: 50vh;">
+    <br>
+    <hr>
+    <div class="row">
+    {% for sportnew in sportnews%}
+    <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 16px;">
+        {% include "sportnew/news_card.html" with sportnew=sportnew %}
+      </div>
+    {%endfor%}
+    </div>
+</div>
+{%endblock%}

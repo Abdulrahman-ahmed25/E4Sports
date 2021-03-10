@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{%block style%}
+.news-cover{
+    width:100% !important;
+}
+{%endblock%}
+{%block content%}
+<div class="container">
+    <!-- <h1 style="background-color: rgba(0, 170, 0, 0.603); text-align: center; color: #fff;">welcome to E4Sports </h1> -->
+        <img src="{{object.get_image_url}}" class="img-fluid news-cover">
+        <div class="row">
+            <div class="col-md-10">
+                <p style="color: gray; margin-bottom: 0;">{{object.created_at}}</p>
+                <p>written by: <small style="color: grey;">{{object.writer}}</small></p>
+                <h3>{{object.title}}</h3>
+                <p>{{object.details}}</p>
+            </div>
+                         <!-- start share_social_networks  -->
+            <div class="share_social_networks col-md-2" >
+            <h5>Share</h5>
+            <!-- <a target="_blank" title="Facebook Share" href="https://www.facebook.com/sharer/sharer.php?u={{request.build_absolute_uri|urlencode}}">
+               <i class="fa fa-facebook-square fa-2x"></i>
+            </a> -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://CodingForEntrepreneurs.com/">
+                Share on Facebook
+                </a>
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                <script type="IN/Share" data-url="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri|urlencode}}"></script>
+            <a target="_blank" title="Twitter Share" href="https://twitter.com/share?url={{ request.build_absolute_uri|urlencode}}">
+               <i class="fa fa-twitter-square fa-2x"></i>
+            </a> 
+            <a target="_blank" title="LinkedIn Share" href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri|urlencode}}">
+                <i class="fa fa-linkedin fa-2x"></i>
+            </a>
+            <a href="whatsapp://send?text={{request.build_absolute_uri|urlencode}}" data-action="share/whatsapp/share" onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on whatsapp">whatsapp</a>
+            <!-- end share_social_networks  -->
+   
+            </div>
+        </div>
+</div>
+{%endblock%}

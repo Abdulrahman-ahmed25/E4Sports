@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{%block style%}
+    .details-p{
+        text-align: justify;
+        max-lines: 30;
+        white-space: nowrap;
+        height:100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+.title{
+    text-transform : capitalize;
+}
+{%endblock%}
+{%block content%}
+<div class="container">
+    <h1 style="background-color: rgba(0, 170, 0, 0.603); text-align: center; color: #fff;">welcome to E4Sports </h1>
+    {% include "sportnew/sportnew.html" with object_list=sport_new_list %}
+
+</div>
+{%endblock%}
