@@ -22,17 +22,19 @@
                <i class="fa fa-facebook-square fa-2x"></i>
             </a> -->
             <a href="https://www.facebook.com/sharer/sharer.php?u=http://CodingForEntrepreneurs.com/">
-                Share on Facebook
+                <i class="fa fa-facebook-square fa-2x"></i>
                 </a>
-                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-                <script type="IN/Share" data-url="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri|urlencode}}"></script>
+                {% comment %} <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                <script type="IN/Share" data-url="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri|urlencode}}"></script> {% endcomment %}
             <a target="_blank" title="Twitter Share" href="https://twitter.com/share?url={{ request.build_absolute_uri|urlencode}}">
                <i class="fa fa-twitter-square fa-2x"></i>
             </a> 
             <a target="_blank" title="LinkedIn Share" href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri|urlencode}}">
                 <i class="fa fa-linkedin fa-2x"></i>
             </a>
-            <a href="whatsapp://send?text={{request.build_absolute_uri|urlencode}}" data-action="share/whatsapp/share" onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on whatsapp">whatsapp</a>
+            {% comment %} <a href="whatsapp://send?text={{request.build_absolute_uri|urlencode}}" data-action="share/whatsapp/share" onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on whatsapp">
+                            <i class="fa fa-whatapp-square fa-2x"></i>
+            </a> {% endcomment %}
             <!-- end share_social_networks  -->
    
             </div>

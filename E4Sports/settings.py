@@ -127,7 +127,6 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [BASE_DIR/'static']
 MEDIA_ROOT = (BASE_DIR/'static/media_root')
-STATIC_ROOT = (BASE_DIR/ 'static_root')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
