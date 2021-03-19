@@ -38,6 +38,9 @@ urlpatterns = [
     template_name = 'registration/password_reset.html',
     success_url = 'accounts/login'),
     name='reset_password' ),
+
+    #for api
+    path('api-auth/', include('rest_framework.urls'))
 ] 
 urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
